@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Protected in OOP</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>The <code>protected</code> Keyword in OOP</h2>
+        
+        <p><strong>Protected</strong> is an access modifier used in object-oriented programming (OOP) to define how members (attributes and methods) of a class can be accessed. When a member is declared as <code>protected</code>, it is accessible within the class where it is declared and by derived classes (subclasses), but not from outside these classes. It allows controlled sharing of data within an inheritance hierarchy.</p>
+        
+        <h3>How <code>protected</code> Works in OOP:</h3>
+        
+        <ul>
+            <li><strong>Encapsulation:</strong> The <code>protected</code> access modifier provides an intermediate level of access control between <code>public</code> (accessible everywhere) and <code>private</code> (accessible only within the class).</li>
+            <li><strong>Inheritance:</strong> A class can share its <code>protected</code> members with its derived classes, making it useful for maintaining encapsulation while still allowing access to important members in the class hierarchy.</li>
+            <li><strong>Restriction:</strong> Unlike <code>public</code> members, <code>protected</code> members are not accessible outside of the class or its subclasses, ensuring better control over the class’s internal workings.</li>
+        </ul>
+
+        <h4>Importance of <code>protected</code>:</h4>
+        
+        <ul>
+            <li><strong>Data Integrity:</strong> It protects class members from being accessed or modified by code outside the class, while still allowing derived classes to inherit and use these members.</li>
+            <li><strong>Flexible Design:</strong> The <code>protected</code> keyword helps in creating a flexible class structure where subclasses can reuse and extend functionality without exposing internal details to the outside world.</li>
+        </ul>
+
+        <h4>Example Code Demonstrating <code>protected</code> in C++:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+class Vehicle {
+protected:
+    int speed;
+
+public:
+    Vehicle(int s) : speed(s) {}
+
+    void showSpeed() {
+        std::cout &lt;&lt; "Speed: " &lt;&lt; speed &lt;&lt; " km/h" &lt;&lt; std::endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    Car(int s) : Vehicle(s) {}
+
+    void accelerate() {
+        speed += 10;
+        std::cout &lt;&lt; "Car accelerated. New speed: " &lt;&lt; speed &lt;&lt; " km/h" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Car myCar(50);
+    myCar.showSpeed();    // Accessible via public method
+    myCar.accelerate();   // Accessible within derived class
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The <strong>Vehicle</strong> class defines a <code>protected</code> member <code>speed</code>, which is only accessible within the <strong>Vehicle</strong> class and its derived classes (like <strong>Car</strong>).</li>
+            <li>The derived class <strong>Car</strong> inherits from <strong>Vehicle</strong> and has access to the <code>speed</code> member. It modifies this member using its own method <code>accelerate</code>.</li>
+            <li>Outside the class, the <code>speed</code> member cannot be accessed directly, ensuring encapsulation and protecting the internal state of the object.</li>
+        </ul>
+
+        <h4>Comparison of Access Modifiers:</h4>
+        
+        <ul>
+            <li><strong>Protected vs Private:</strong> <code>protected</code> allows access in derived classes, while <code>private</code> restricts access even to derived classes.</li>
+            <li><strong>Protected vs Public:</strong> <code>protected</code> restricts access to only derived classes, whereas <code>public</code> members are accessible everywhere.</li>
+        </ul>
+
+        <h4>Conclusion:</h4>
+        <p>The <code>protected</code> keyword strikes a balance between providing flexibility for inheritance and ensuring data protection, making it a crucial part of class design in OOP. It allows derived classes to extend base class functionality while keeping sensitive data members protected from external access.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>

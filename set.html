@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Sets in Programming</h2>
+    <p>
+        A <strong>set</strong> is a collection of unique elements, and it is widely used in programming for various purposes such as ensuring data uniqueness, performing mathematical operations, and optimizing membership tests.
+    </p>
+    
+    <h3>Importance of Sets</h3>
+    <ul>
+        <li><strong>Uniqueness:</strong> Sets inherently do not allow duplicate values.</li>
+        <li><strong>Efficiency:</strong> Fast membership tests and operations like union, intersection, and difference.</li>
+        <li><strong>Mathematical Operations:</strong> Sets can be used to perform mathematical set operations easily.</li>
+    </ul>
+    
+    <h3>Common Uses</h3>
+    <ul>
+        <li>Data deduplication.</li>
+        <li>Membership testing.</li>
+        <li>Grouping items into distinct categories.</li>
+    </ul>
+    
+    <h3>How to Use Sets</h3>
+    
+    <h4>Python Example</h4>
+<div class="example-box">
+    <pre>
+# Creating a set
+fruits = {"apple", "banana", "orange", "apple"}  # 'apple' will be stored once
+
+# Adding elements
+fruits.add("grape")
+
+# Removing elements
+fruits.remove("banana")
+
+# Checking membership
+if "orange" in fruits:
+    print("Orange is in the set.")
+
+# Iterating over a set
+for fruit in fruits:
+    print(fruit)
+
+# Set operations
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+# Union
+union_set = set1 | set2  # {1, 2, 3, 4, 5}
+
+# Intersection
+intersection_set = set1 & set2  # {3}
+
+# Difference
+difference_set = set1 - set2  # {1, 2}
+    </pre>
+</div>
+
+<h4>C++ Example</h4>
+<div class="example-box">
+    <pre>
+#include <iostream>
+#include <set>
+
+int main() {
+    std::set<int> numbers = {1, 2, 3, 2}; // 2 will be stored once
+
+    // Adding elements
+    numbers.insert(4);
+
+    // Removing elements
+    numbers.erase(2);
+
+    // Checking membership
+    if (numbers.find(3) != numbers.end()) {
+        std::cout << "3 is in the set." << std::endl;
+    }
+
+    // Iterating over a set
+    for (const auto& num : numbers) {
+        std::cout << num << " ";
+    }
+
+    return 0;
+}
+    </pre>
+</div>
+
+
+</section>
+
+<footer>
+    <p>All rights reserved &copy; 2024</p>
+</footer>
+
+</body>
+</html>

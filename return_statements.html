@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Return Statements in C++</h2>
+    <ul>
+        <li><strong>return 0:</strong>
+            <ul>
+                <li>Indicates successful execution of the program.</li>
+                <li>Used in the <code>main</code> function to signify that the program ran without errors.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong>
+                <pre>
+int main() {
+    // Code logic here
+    return 0; // Indicating successful execution
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>return 1:</strong>
+            <ul>
+                <li>Can be used to indicate a general error or abnormal termination.</li>
+                <li>It's common to use this value to signify that the program encountered a problem.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong>
+                <pre>
+int main() {
+    // Simulating an error
+    if (/* error condition */) {
+        return 1; // Indicating an error
+    }
+    return 0; // Success
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>return -1:</strong>
+            <ul>
+                <li>Similar to <code>return 1</code>, but often used to indicate a specific type of error.</li>
+                <li>Negative return values can help differentiate between error types.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong>
+                <pre>
+int main() {
+    // Specific error condition
+    if (/* specific error */) {
+        return -1; // Indicating a specific error
+    }
+    return 0; // Success
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>return true:</strong>
+            <ul>
+                <li>Represents a true condition in functions that return a boolean value.</li>
+                <li>Commonly used in conditional checks.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong>
+                <pre>
+bool isEven(int number) {
+    return number % 2 == 0; // Returns true if number is even
+}
+
+int main() {
+    if (isEven(4)) {
+        // Do something
+    }
+    return 0;
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>return false:</strong>
+            <ul>
+                <li>Represents a false condition in boolean-returning functions.</li>
+                <li>Indicates that a certain condition has not been met.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong>
+                <pre>
+bool isPositive(int number) {
+    return number > 0; // Returns false if number is not positive
+}
+
+int main() {
+    if (!isPositive(-5)) {
+        // Handle the negative case
+    }
+    return 0;
+}
+                </pre>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encapsulation in OOP</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Encapsulation in OOP</h2>
+        
+        <p><strong>Encapsulation</strong> is one of the four fundamental principles of object-oriented programming (OOP). It refers to the bundling of data (attributes) and methods (functions) that operate on the data into a single unit called a class. Additionally, encapsulation restricts direct access to some of the object's components, which can help prevent the accidental modification of data.</p>
+        
+        <h3>How Encapsulation Works:</h3>
+        
+        <ul>
+            <li><strong>Access Modifiers:</strong> Encapsulation is achieved using access modifiers such as <code>private</code>, <code>protected</code>, and <code>public</code>, which define the visibility of class members.</li>
+            <li><strong>Getter and Setter Methods:</strong> To access or modify private attributes, classes often provide public methods known as getters and setters, allowing controlled access to the attributes.</li>
+            <li><strong>Data Hiding:</strong> By restricting access to certain parts of an object, encapsulation helps to hide the internal state and requires all interaction to be performed through well-defined interfaces.</li>
+        </ul>
+
+        <h4>Importance of Encapsulation:</h4>
+        
+        <ul>
+            <li><strong>Data Protection:</strong> It protects the integrity of the data by preventing unauthorized access and modification.</li>
+            <li><strong>Modularity:</strong> Encapsulation allows for modular code, making it easier to maintain and update.</li>
+            <li><strong>Abstraction:</strong> It provides a clear separation between the interface and implementation, allowing changes in the implementation without affecting the users of the class.</li>
+        </ul>
+
+        <h4>Example Code Demonstrating Encapsulation in C++:</h4>
+
+        <pre>
+// Example 1: Basic Encapsulation
+#include &lt;iostream&gt;
+
+class BankAccount {
+private:
+    double balance;
+
+public:
+    BankAccount(double initialBalance) : balance(initialBalance) {}
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+};
+
+int main() {
+    BankAccount account(1000);
+    account.deposit(500);
+    account.withdraw(200);
+    std::cout &lt;&lt; "Current balance: " &lt;&lt; account.getBalance() &lt;&lt; std::endl;
+
+    return 0;
+}
+
+// Example 2: Using Getters and Setters
+#include &lt;iostream&gt;
+
+class Person {
+private:
+    std::string name;
+    int age;
+
+public:
+    void setName(std::string n) {
+        name = n;
+    }
+
+    void setAge(int a) {
+        if (a > 0) {
+            age = a;
+        }
+    }
+
+    std::string getName() const {
+        return name;
+    }
+
+    int getAge() const {
+        return age;
+    }
+};
+
+int main() {
+    Person person;
+    person.setName("Alice");
+    person.setAge(30);
+    std::cout &lt;&lt; "Name: " &lt;&lt; person.getName() &lt;&lt; ", Age: " &lt;&lt; person.getAge() &lt;&lt; std::endl;
+
+    return 0;
+}
+
+// Example 3: Read-Only Attribute
+#include &lt;iostream&gt;
+
+class Rectangle {
+private:
+    double width;
+    double height;
+
+public:
+    Rectangle(double w, double h) : width(w), height(h) {}
+
+    double getArea() const {
+        return width * height;
+    }
+};
+
+int main() {
+    Rectangle rect(5, 10);
+    std::cout &lt;&lt; "Area of rectangle: " &lt;&lt; rect.getArea() &lt;&lt; std::endl;
+
+    return 0;
+}
+
+// Example 4: Encapsulation with Inheritance
+#include &lt;iostream&gt;
+
+class Shape {
+private:
+    std::string color;
+
+protected:
+    void setColor(std::string c) {
+        color = c;
+    }
+
+public:
+    std::string getColor() const {
+        return color;
+    }
+};
+
+class Circle : public Shape {
+public:
+    Circle(std::string c) {
+        setColor(c); // Accessing protected method
+    }
+};
+
+int main() {
+    Circle circle("Red");
+    std::cout &lt;&lt; "Circle color: " &lt;&lt; circle.getColor() &lt;&lt; std::endl;
+
+    return 0;
+}
+
+// Example 5: Control Access
+#include &lt;iostream&gt;
+
+class Temperature {
+private:
+    float celsius;
+
+public:
+    Temperature(float temp) : celsius(temp) {}
+
+    float toFahrenheit() {
+        return (celsius * 9 / 5) + 32;
+    }
+};
+
+int main() {
+    Temperature temp(25);
+    std::cout &lt;&lt; "Temperature in Fahrenheit: " &lt;&lt; temp.toFahrenheit() &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>In the first example, the <strong>BankAccount</strong> class uses <code>private</code> members to encapsulate the <code>balance</code> attribute, with public methods to deposit, withdraw, and get the balance.</li>
+            <li>The second example demonstrates the use of getters and setters in the <strong>Person</strong> class, allowing controlled access to the <code>name</code> and <code>age</code> attributes.</li>
+            <li>In the third example, the <strong>Rectangle</strong> class provides a read-only <code>getArea</code> method that calculates the area based on private attributes.</li>
+            <li>The fourth example shows how encapsulation works with inheritance, where the <strong>Circle</strong> class can access a protected method to set the <code>color</code> from the <strong>Shape</strong> class.</li>
+            <li>The fifth example controls access to the <strong>Temperature</strong> class, providing a method to convert temperature without exposing the <code>celsius</code> attribute directly.</li>
+        </ul>
+
+        <h4>Conclusion:</h4>
+        <p>Encapsulation is a fundamental principle in OOP that enhances data security, integrity, and modularity. By restricting access to the internal state of an object and providing controlled interfaces, encapsulation helps to create more robust and maintainable code.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

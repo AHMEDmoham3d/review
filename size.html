@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Size of Vector in C++</h2>
+    <ul>
+        <li><strong>What is Size?</strong>
+            <ul>
+                <li>The size of a vector in C++ refers to the number of elements currently stored in the vector.</li>
+                <li>You can obtain the size of a vector using the <code>size()</code> member function.</li>
+            </ul>
+        </li>
+        
+        <li><strong>Example of Using Size:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector<int> myVector;
+
+    myVector.push_back(10); // Add element
+    myVector.push_back(20); // Add element
+    myVector.push_back(30); // Add element
+
+    std::cout &lt;&lt; "Size of vector: " &lt;&lt; myVector.size() &lt;&lt; std::endl; // Output the size
+
+    return 0;
+}
+                </pre>
+            </div>
+        </li>
+        
+        <li><strong>Dynamic Changes:</strong>
+            <ul>
+                <li>The size of a vector can change dynamically as elements are added or removed.</li>
+                <li>Each time you call <code>push_back()</code>, the size increases by one.</li>
+                <li>When you call <code>pop_back()</code>, the size decreases by one.</li>
+            </ul>
+        </li>
+
+        <li><strong>Example of Dynamic Changes:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector<int> myVector;
+
+    myVector.push_back(10);
+    myVector.push_back(20);
+    myVector.push_back(30);
+    std::cout &lt;&lt; "Size after adding elements: " &lt;&lt; myVector.size() &lt;&lt; std::endl; // Outputs 3
+
+    myVector.pop_back(); // Remove the last element
+    std::cout &lt;&lt; "Size after removing an element: " &lt;&lt; myVector.size() &lt;&lt; std::endl; // Outputs 2
+
+    return 0;
+}
+                </pre>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+<footer>
+    <p>All rights reserved &copy; 2024</p>
+</footer>
+
+</body>
+</html>

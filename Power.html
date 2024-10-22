@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Power in Programming</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Power in Programming</h2>
+    <p>
+        The term <strong>Power</strong> refers to the operation of raising a number (the base) to the exponent (the power). It is an essential mathematical operation in programming, used in various applications such as scientific computations, graphics programming, and data analysis.
+    </p>
+    <p>
+        The power operation is often represented as <code>base^exponent</code>, which means multiplying the base by itself for the number of times indicated by the exponent. For example, <code>2^3</code> (2 raised to the power of 3) equals 8.
+    </p>
+    
+    <h3>Programming Examples</h3>
+    
+    <div class="example-box">
+        <strong>1. Using the `pow()` Function in C:</strong><br><br>
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double base = 2.0;
+    double exponent = 3.0;
+
+    double result = pow(base, exponent);  // 2^3 = 8
+    printf("%.2f raised to the power of %.2f is %.2f\n", base, exponent, result);
+    
+    return 0;
+}
+        </pre>
+        <p><strong>Explanation:</strong> This program uses the <code>pow()</code> function from the <code>math.h</code> library to calculate 2 raised to the power of 3.</p>
+    </div>
+
+    <div class="example-box">
+        <strong>2. Power Operation in Python:</strong><br><br>
+        <pre>
+base = 3
+exponent = 4
+
+result = base ** exponent  # 3^4 = 81
+print(f"{base} raised to the power of {exponent} is {result}")
+        </pre>
+        <p><strong>Explanation:</strong> In Python, the <code>**</code> operator is used to raise 3 to the power of 4, resulting in 81.</p>
+    </div>
+
+    <div class="example-box">
+        <strong>3. Calculating Power using Loops in JavaScript:</strong><br><br>
+        <pre>
+function power(base, exponent) {
+    let result = 1;
+    for (let i = 0; i < exponent; i++) {
+        result *= base; // Multiply base for exponent times
+    }
+    return result;
+}
+
+console.log(power(5, 3)); // 5^3 = 125
+        </pre>
+        <p><strong>Explanation:</strong> This JavaScript function calculates the power of a number by multiplying the base by itself for the given exponent.</p>
+    </div>
+    
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

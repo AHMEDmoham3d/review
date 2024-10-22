@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Switch Statement in C++</h2>
+    <ul>
+        <li><strong>What is a Switch Statement?</strong>
+            <ul>
+                <li>The <code>switch</code> statement is a control structure used to handle multiple conditions based on the value of a single variable.</li>
+                <li>It is an alternative to multiple <code>if-else</code> statements when we need to compare a variable to a set of constant values.</li>
+                <li>Switch statements make the code cleaner and more readable, especially when dealing with numerous options.</li>
+            </ul>
+        </li>
+    
+        <li><strong>Basic Syntax of Switch:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    switch (expression) {
+        case value1:
+            // code block for value1
+            break;
+        case value2:
+            // code block for value2
+            break;
+        default:
+            // code block if no cases match
+    }
+                </pre>
+            </div>
+        </li>
+    
+        <li><strong>Example 1 - Day of the Week:</strong>
+            <ul>
+                <li>This example shows how we can print the name of a day based on a number input.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    int day = 3;
+
+    switch(day) {
+        case 1:
+            cout << "Monday";
+            break;
+        case 2:
+            cout << "Tuesday";
+            break;
+        case 3:
+            cout << "Wednesday";
+            break;
+        case 4:
+            cout << "Thursday";
+            break;
+        case 5:
+            cout << "Friday";
+            break;
+        case 6:
+            cout << "Saturday";
+            break;
+        case 7:
+            cout << "Sunday";
+            break;
+        default:
+            cout << "Invalid day";
+    }
+                </pre>
+            </div>
+        </li>
+        
+        <li><strong>Example 2 - Simple Calculator:</strong>
+            <ul>
+                <li>This is a simple calculator using the switch statement to select the operation based on user input.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    char operation;
+    float num1, num2;
+
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> operation;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    switch(operation) {
+        case '+':
+            cout << num1 + num2;
+            break;
+        case '-':
+            cout << num1 - num2;
+            break;
+        case '*':
+            cout << num1 * num2;
+            break;
+        case '/':
+            if(num2 != 0)
+                cout << num1 / num2;
+            else
+                cout << "Error: Division by zero!";
+            break;
+        default:
+            cout << "Invalid operator";
+    }
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>Example 3 - Grade Evaluation:</strong>
+            <ul>
+                <li>This example evaluates a student's grade and provides feedback based on the letter grade.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    char grade = 'B';
+
+    switch (grade) {
+        case 'A':
+            cout << "Excellent!";
+            break;
+        case 'B':
+            cout << "Good!";
+            break;
+        case 'C':
+            cout << "Fair!";
+            break;
+        case 'D':
+            cout << "Poor!";
+            break;
+        case 'F':
+            cout << "Failed!";
+            break;
+        default:
+            cout << "Invalid grade!";
+    }
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>Key Features of Switch:</strong>
+            <ul>
+                <li>The <code>break</code> statement is used to exit the switch block once a case has been executed.</li>
+                <li>The <code>default</code> case is optional but useful for handling cases where none of the defined cases match the value.</li>
+                <li>It works with integers, characters, and enumeration values, but not floating-point values.</li>
+            </ul>
+        </li>
+
+        <li><strong>Switch vs. If-Else:</strong>
+            <ul>
+                <li><strong>Switch:</strong> More efficient and cleaner when working with multiple fixed values. Easier to read.</li>
+                <li><strong>If-Else:</strong> More flexible and can handle complex conditions, not just constant values.</li>
+            </ul>
+        </li>
+    </ul>
+    
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

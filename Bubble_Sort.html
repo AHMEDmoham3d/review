@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bubble Sort in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Bubble Sort in C++</h2>
+        
+        <p><strong>Bubble Sort</strong> is one of the simplest sorting algorithms used to sort a list of elements in either ascending or descending order. The idea behind Bubble Sort is to repeatedly swap adjacent elements if they are in the wrong order, which "bubbles" the largest (or smallest) element to its correct position after each pass.</p>
+        
+        <h3>How Bubble Sort Works:</h3>
+        
+        <ul>
+            <li><strong>Step 1:</strong> Start from the first element and compare it with the next one.</li>
+            <li><strong>Step 2:</strong> If the first element is larger than the second, swap them.</li>
+            <li><strong>Step 3:</strong> Move to the next pair of elements and repeat the comparison and swap.</li>
+            <li><strong>Step 4:</strong> Continue this process for all elements, ensuring that after each pass, the largest unsorted element is moved to its correct position at the end of the list.</li>
+            <li><strong>Step 5:</strong> Repeat the process for the remaining unsorted part of the list until the entire list is sorted.</li>
+        </ul>
+
+        <h4>Importance of Bubble Sort:</h4>
+        
+        <ul>
+            <li><strong>Simplicity:</strong> Bubble Sort is easy to understand and implement.</li>
+            <li><strong>Small datasets:</strong> It works well for small datasets where performance is not a major concern.</li>
+            <li><strong>Educational:</strong> It is often used to introduce the concept of sorting algorithms.</li>
+        </ul>
+
+        <h4>Example Code for Bubble Sort:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap the elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n);
+
+    std::cout &lt;&lt; "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The function <strong>bubbleSort</strong> takes an array and its size as input, and sorts the array in ascending order using the Bubble Sort algorithm.</li>
+            <li>Two nested loops are used: the outer loop tracks the number of passes, and the inner loop compares adjacent elements and swaps them if they are in the wrong order.</li>
+            <li>After each pass, the largest element in the unsorted part of the array moves to its correct position at the end.</li>
+        </ul>
+
+        <h4>Optimized Bubble Sort:</h4>
+        <p>The basic version of Bubble Sort can be optimized by adding a flag to detect if the array is already sorted. If no elements are swapped during a pass, the array is considered sorted, and the algorithm can terminate early.</p>
+
+        <pre>
+#include &lt;iostream&gt;
+
+void optimizedBubbleSort(int arr[], int n) {
+    bool swapped;
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap the elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+
+        // If no elements were swapped, the array is already sorted
+        if (!swapped)
+            break;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    optimizedBubbleSort(arr, n);
+
+    std::cout &lt;&lt; "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

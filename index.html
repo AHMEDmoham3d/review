@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#section-answers">Some Answers</a></li>
+                <li><a href="#section-c">C Programming</a></li>
+                <li><a href="#section-cpp">C++ Programming</a></li>
+                <li><a href="#section-ds">Data Structures</a></li>
+                <li><a href="#section-alg">Algorithms</a></li>
+                <li><a href="#section-os">OOP</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropbtn">Contact</a>
+                    <div class="dropdown-content">
+                        <a href="support.html">Support</a>
+                        <a href="feedback.html">Feedback</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <section id="section-answers">
+        <h2>Some Answers</h2>
+        <div class="section-content">
+            <a href="logical_operators.html" class="box">Logical Operators</a>
+            <a href="i++_and_++i.html" class="box">The Difference Between i++ and ++i</a>
+            <a href="return_statements.html" class="box">Return Statements</a>
+            <a href="Printformats.html" class="box hidden">Print Formats</a>
+            <a href="for_loop.html" class="box hidden">For Loop</a>
+            <a href="Switch.html" class="box hidden">Switch</a>
+            <a href="Array.html" class="box hidden">Array</a>
+            <a href="Ascii.html" class="box hidden">ASCII Table</a>
+            <a href="size.html" class="box hidden">Size of the Vector</a>
+            <a href="Function.html" class="box hidden">Function</a>
+            <a href="Power.html" class="box hidden">Power</a>
+            <a href="set.html" class="box hidden">Set</a>
+        </div>
+        <div class="show-more-container">
+            <button class="show-more-btn" onclick="showMore()">Show More</button>
+        </div>
+    </section>
+    
+
+    <section id="section-c">
+        <h2>C Programming</h2>
+        <div class="section-content">
+            <a href="c_intro.html" class="box">C Introduction</a>
+            <a href="printf.html" class="box">printf</a>
+            <a href="Variables.html" class="box">Variables</a>
+            <a href="If_Statement.html" class="box">If Statement</a>
+        </div>
+    </section>
+
+    <section id="section-cpp">
+        <h2>C++ Programming</h2>
+        <div class="section-content">
+            <a href="cpp_intro.html" class="box">C++ Introduction</a>
+            <a href="cout.html" class="box">cout</a>
+            <a href="cin.html" class="box">cin</a>
+            <a href="for.html" class="box">for</a>
+        </div>
+    </section>
+
+    <section id="section-ds">
+        <h2>Data Structures</h2>
+        <div class="section-content">
+            <a href="Recursion.html" class="box">Recursion</a>
+            <a href="Fibonacci.html" class="box">Fibonacci</a>
+            <a href="malloc.html" class="box">malloc</a>
+            <a href="calloc.html" class="box">calloc</a>
+        </div>
+    </section>
+
+    <section id="section-alg">
+        <h2>Algorithms</h2>
+        <div class="section-content">
+            <a href="prime.html" class="box">prime</a>
+            <a href="SieveofEratosthenes.html" class="box">SieveofEratosthenes</a>
+            <a href="Bubble_Sort.html" class="box">Bubble Sort</a>
+            <a href="Selection_Sort.html" class="box">Selection Sort</a>
+        </div>
+    </section>
+
+    <section id="section-os">
+        <h2>OOP</h2>
+        <div class="section-content">
+            <a href="Keywords.html" class="box">Key words</a>
+            <a href="Protected.html" class="box">Protected</a>
+            <a href="Encapsulation.html" class="box">Encapsulation</a>
+            <a href="oop_Multiple.html" class="box"> Multiple Inheritance</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showMore() {
+            const hiddenBoxes = document.querySelectorAll('.hidden');
+            const button = document.querySelector('.show-more-btn');
+    
+            // إظهار العناصر المخفية
+            hiddenBoxes.forEach(box => {
+                box.classList.remove('hidden');
+            });
+    
+            // إخفاء الزر بعد إظهار العناصر
+            button.style.display = 'none'; // إخفاء الزر
+        }
+    </script>
+    
+
+</body>
+</html>

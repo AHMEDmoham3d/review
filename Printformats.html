@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Format Specifiers in C</title> <!-- Added a title -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+
+<section> <!-- Opening section tag added -->
+<h2>Format Specifiers in C</h2>
+<ul>
+    <li><strong>%d:</strong>
+        <ul>
+            <li>Used to print integers.</li>
+            <li>Example: <code>int num = 10; printf("%d", num); // Output: 10</code></li>
+            <li>Another Example: <code>int a = 5, b = 10; printf("Sum: %d", a + b); // Output: Sum: 15</code></li>
+            <li>Yet Another Example: <code>int x = -20; printf("Negative Number: %d", x); // Output: Negative Number: -20</code></li>
+        </ul>
+        <div class="example-box">
+            <strong>Examples in C:</strong>
+            <pre>
+int main() {
+    int num = 10;
+    printf("%d\n", num); // Output: 10
+
+    int a = 5, b = 10;
+    printf("Sum: %d\n", a + b); // Output: Sum: 15
+
+    int x = -20;
+    printf("Negative Number: %d\n", x); // Output: Negative Number: -20
+}
+            </pre>
+        </div>
+    </li>
+    
+    <li><strong>%c:</strong>
+        <ul>
+            <li>Used to print a single character.</li>
+            <li>Example: <code>char letter = 'A'; printf("%c", letter); // Output: A</code></li>
+            <li>Another Example: <code>char symbol = '#'; printf("Symbol: %c", symbol); // Output: Symbol: #</code></li>
+            <li>Yet Another Example: <code>char first = 'C'; char second = 'P'; printf("Letters: %c%c", first, second); // Output: Letters: CP</code></li>
+        </ul>
+        <div class="example-box">
+            <strong>Examples in C:</strong>
+            <pre>
+int main() {
+    char letter = 'A';
+    printf("%c\n", letter); // Output: A
+
+    char symbol = '#';
+    printf("Symbol: %c\n", symbol); // Output: Symbol: #
+
+    char first = 'C', second = 'P';
+    printf("Letters: %c%c\n", first, second); // Output: Letters: CP
+}
+            </pre>
+        </div>
+    </li>
+    
+    <li><strong>%s:</strong>
+        <ul>
+            <li>Used to print a string.</li>
+            <li>Example: <code>char str[] = "Hello"; printf("%s", str); // Output: Hello</code></li>
+            <li>Another Example: <code>char name[] = "Alice"; printf("Name: %s", name); // Output: Name: Alice</code></li>
+            <li>Yet Another Example: <code>char greeting[] = "Welcome to C programming!"; printf("Greeting: %s", greeting); // Output: Greeting: Welcome to C programming!</code></li>
+        </ul>
+        <div class="example-box">
+            <strong>Examples in C:</strong>
+            <pre>
+int main() {
+    char str[] = "Hello";
+    printf("%s\n", str); // Output: Hello
+
+    char name[] = "Alice";
+    printf("Name: %s\n", name); // Output: Name: Alice
+
+    char greeting[] = "Welcome to C programming!";
+    printf("Greeting: %s\n", greeting); // Output: Greeting: Welcome to C programming!
+}
+            </pre>
+        </div>
+    </li>
+    
+    <li><strong>%llu:</strong>
+        <ul>
+            <li>Used to print unsigned long long integers.</li>
+            <li>Example: <code>unsigned long long largeNum = 123456789012345; printf("%llu", largeNum); // Output: 123456789012345</code></li>
+            <li>Another Example: <code>unsigned long long bigNum = 18446744073709551615ULL; printf("Big Number: %llu", bigNum); // Output: Big Number: 18446744073709551615</code></li>
+            <li>Yet Another Example: <code>unsigned long long count = 1000000000; printf("Count: %llu", count); // Output: Count: 1000000000</code></li>
+        </ul>
+        <div class="example-box">
+            <strong>Examples in C:</strong>
+            <pre>
+int main() {
+    unsigned long long largeNum = 123456789012345;
+    printf("%llu\n", largeNum); // Output: 123456789012345
+
+    unsigned long long bigNum = 18446744073709551615ULL;
+    printf("Big Number: %llu\n", bigNum); // Output: Big Number: 18446744073709551615
+
+    unsigned long long count = 1000000000;
+    printf("Count: %llu\n", count); // Output: Count: 1000000000
+}
+            </pre>
+        </div>
+    </li>
+</ul>
+</section> <!-- Closing section tag -->
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

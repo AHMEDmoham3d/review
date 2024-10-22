@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Keywords in OOP</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Keywords in Object-Oriented Programming (OOP)</h2>
+        
+        <p><strong>Keywords</strong> are reserved words in a programming language that have a special meaning. They are used to define the structure and behavior of code, especially in Object-Oriented Programming (OOP). These words help in controlling access, inheritance, encapsulation, and polymorphism, which are core concepts in OOP.</p>
+        
+        <h3>How Keywords Work in OOP:</h3>
+        
+        <ul>
+            <li><strong>Access Modifiers:</strong> Keywords like <code>public</code>, <code>private</code>, and <code>protected</code> control access to members (attributes and methods) of a class, ensuring encapsulation and data protection.</li>
+            <li><strong>Inheritance:</strong> Keywords like <code>extends</code> in Java or <code>:</code> in C++ enable inheritance, allowing one class to inherit the properties and methods of another.</li>
+            <li><strong>Polymorphism:</strong> Keywords like <code>virtual</code> and <code>override</code> (in C++) allow methods to behave differently based on the object that invokes them, facilitating dynamic method resolution.</li>
+            <li><strong>Class and Object Definition:</strong> The keyword <code>class</code> is used to define new classes, and <code>new</code> is used to create objects in memory.</li>
+        </ul>
+
+        <h4>Importance of Keywords in OOP:</h4>
+        
+        <ul>
+            <li><strong>Organized Code:</strong> Keywords help in organizing code into logical structures like classes and objects, making it easier to manage complex programs.</li>
+            <li><strong>Data Protection:</strong> By using access modifiers, you can hide certain data members and methods, protecting the integrity of the data.</li>
+            <li><strong>Code Reusability:</strong> Inheritance allows for reusing code by creating new classes that extend existing ones, making development more efficient.</li>
+            <li><strong>Flexibility:</strong> Polymorphism enables flexibility in method usage, allowing for code to be more dynamic and adaptable to various contexts.</li>
+        </ul>
+
+        <h4>Example Code Demonstrating Keywords in C++:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+class Animal {
+protected:
+    std::string name;
+
+public:
+    Animal(std::string n) : name(n) {}
+
+    // A virtual function to be overridden in derived classes
+    virtual void makeSound() {
+        std::cout << "Animal sound" << std::endl;
+    }
+
+    // A public method to show the name of the animal
+    void showName() {
+        std::cout << "Animal name: " << name << std::endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    Dog(std::string n) : Animal(n) {}
+
+    // Overriding the makeSound function
+    void makeSound() override {
+        std::cout << "Dog barks" << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Animal("Generic Animal");
+    Dog* dog = new Dog("Buddy");
+
+    animal->makeSound();
+    dog->makeSound();
+
+    animal->showName();
+    dog->showName();
+
+    delete animal;
+    delete dog;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The <strong>Animal</strong> class uses the keyword <code>class</code> to define a class, and <code>protected</code> to restrict access to the member <code>name</code> outside of the class hierarchy.</li>
+            <li>The <code>virtual</code> keyword is used in the <strong>makeSound</strong> method to allow derived classes (like <strong>Dog</strong>) to override this method and provide their own implementation.</li>
+            <li>The keyword <code>override</code> in the <strong>Dog</strong> class ensures that the method <strong>makeSound</strong> correctly overrides the virtual method from the base class.</li>
+            <li>The keyword <code>public</code> in the derived class <strong>Dog</strong> means that all public and protected members from <strong>Animal</strong> will be accessible in <strong>Dog</strong>.</li>
+        </ul>
+
+        <h4>Comparison of Keywords in Other Languages:</h4>
+        
+        <ul>
+            <li><strong>C++ vs Java:</strong> In C++, you use <code>virtual</code> for dynamic polymorphism, while in Java, methods are virtual by default unless marked <code>final</code>.</li>
+            <li><strong>Inheritance:</strong> In Java, the <code>extends</code> keyword is used for inheritance, whereas in C++, a colon <code>:</code> is used.</li>
+        </ul>
+
+        <h4>Conclusion:</h4>
+        <p>Keywords are essential in structuring and controlling how classes and objects interact in OOP. They define access levels, inheritance, polymorphism, and more, ensuring that your code is well-organized, flexible, and reusable.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>

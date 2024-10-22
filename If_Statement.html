@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Importance and Uses of C Language</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Importance and Uses of C Language</h2>
+        
+        <p>The C language is considered one of the oldest and most influential programming languages. It was developed in the early 1970s by Dennis Ritchie at Bell Labs, aiming to provide an efficient way to develop systems. C serves as the foundation for many modern programming languages.</p>
+        
+        <h3>Importance of C Language:</h3>
+        
+        <ul>
+            <li><strong>High Performance:</strong> C is known for its high performance and speed, making it ideal for developing applications that require quick responsiveness.</li>
+            <li><strong>Full Memory Control:</strong> C provides precise control over memory management, allowing programmers to optimize application performance.</li>
+            <li><strong>Portability:</strong> C programs can run on multiple operating systems with minimal modifications, facilitating software development across different platforms.</li>
+            <li><strong>Foundation for Learning Other Languages:</strong> C is a basis for many other programming languages, making understanding it essential for programmers.</li>
+            <li><strong>Strong Support Community:</strong> C has a large community of programmers, making it easy to find resources, tutorials, and support.</li>
+        </ul>
+
+        <h3>Uses of C Language:</h3>
+        
+        <ul>
+            <li><strong>Operating System Development:</strong> C is used in developing operating systems like UNIX and Linux.</li>
+            <li><strong>Device Programming:</strong> C is used for programming embedded systems and small devices.</li>
+            <li><strong>Software Development:</strong> C is used to create desktop applications and server applications.</li>
+            <li><strong>Video Games:</strong> C is used in developing many games due to its high performance.</li>
+            <li><strong>Scientific Applications:</strong> C is used in applications that require complex calculations, such as simulations and modeling.</li>
+        </ul>
+
+        <h3>Using If Statement in C Language:</h3>
+        
+        <p>The <code>if</code> statement is a conditional statement used to execute a block of code based on whether a specified condition evaluates to true. It allows for decision-making in programs, enabling different actions based on varying conditions.</p>
+        
+        <h4>Syntax:</h4>
+        
+        <pre>
+if (condition) {
+    // code to be executed if condition is true
+}
+        </pre>
+
+        <h4>Importance of If Statement:</h4>
+        
+        <ul>
+            <li><strong>Control Flow:</strong> It helps control the flow of execution in a program based on conditions.</li>
+            <li><strong>Dynamic Behavior:</strong> It enables programs to respond dynamically to different inputs or states.</li>
+            <li><strong>Complex Logic:</strong> It allows for implementing complex logic based on multiple conditions.</li>
+        </ul>
+
+        <h4>Examples:</h4>
+        
+        <h5>Example 1: Checking Age</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
+    if (age >= 18) {
+        printf("You are an adult.\n");
+    } else {
+        printf("You are a minor.\n");
+    }
+    
+    return 0;
+}
+        </pre>
+        
+        <h5>Example 2: Checking Score</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int score;
+    printf("Enter your score: ");
+    scanf("%d", &score);
+    
+    if (score >= 90) {
+        printf("Grade: A\n");
+    } else if (score >= 80) {
+        printf("Grade: B\n");
+    } else if (score >= 70) {
+        printf("Grade: C\n");
+    } else if (score >= 60) {
+        printf("Grade: D\n");
+    } else {
+        printf("Grade: F\n");
+    }
+    
+    return 0;
+}
+        </pre>
+        
+        <h5>Example 3: Checking Even or Odd</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int number;
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    
+    if (number % 2 == 0) {
+        printf("%d is an even number.\n", number);
+    } else {
+        printf("%d is an odd number.\n", number);
+    }
+    
+    return 0;
+}
+        </pre>
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>

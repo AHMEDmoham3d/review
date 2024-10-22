@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* ترتيب العناصر عمودياً */
+            justify-content: center; /* محاذاة المحتوى في الوسط */
+            align-items: center; /* محاذاة العناصر في الوسط */
+            min-height: 100vh; /* جعل الحد الأدنى للارتفاع هو 100% من ارتفاع الصفحة */
+            background-color: #e4e4e4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #007bff; /* لون خلفية الهيدر */
+            width: 100%; /* ملء عرض الصفحة */
+            padding: 20px 0; /* زيادة الحشو في الهيدر */
+            text-align: center; /* توسيط النص */
+            color: white; /* لون النص في الهيدر */
+        }
+        .nav-list {
+            list-style-type: none; /* إزالة النقاط من قائمة الروابط */
+            padding: 0; /* إزالة الحشو */
+            margin: 0; /* إزالة الهوامش */
+        }
+        .nav-list li {
+            display: inline; /* عرض العناصر بشكل أفقي */
+        }
+        .nav-list a {
+            color: white; /* لون النص في الرابط */
+            text-decoration: none; /* إزالة الخط تحت الرابط */
+            padding: 10px 15px; /* إضافة حشو حول الرابط */
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px; /* حشو البوكس */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: auto; /* دفع الفوتر للأسفل */
+            width: 400px; /* تحديد عرض البوكس */
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        p {
+            margin-bottom: 30px; /* إضافة مساحة تحت الفقرة */
+            color: #333; /* لون النص */
+            font-size: 16px; /* حجم النص */
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #007bff; /* لون خلفية الفوتر */
+            color: white; /* لون النص في الفوتر */
+            text-align: center; /* توسيط النص في الفوتر */
+            padding: 20px 0; /* زيادة الحشو في الفوتر */
+            width: 100%; /* ملء عرض الصفحة */
+            position: relative; /* موقع نسبي للفوتر */
+            bottom: 0; /* تواجد الفوتر في الأسفل */
+        }
+        footer p {
+            margin: 0; /* إزالة الهوامش */
+            color: white; /* التأكيد على أن لون النص أبيض */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Send Message</h1>
+        <p>Please send the questions you would like to know the answers to</p>
+        <a href="mailto:3hmedmoham3d@gmail.com" target="_blank">
+            <button>Send</button>
+        </a>
+    </div>
+  
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+</body>
+</html>

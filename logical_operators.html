@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Logical Operators</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Logical Operators</h2>
+    
+    <ul>
+        <li><strong>&& (Logical AND):</strong>
+            <ul>
+                <li>Means "and" in logic.</li>
+                <li>Used to check if both conditions are true. If both are true, it returns true; otherwise, it returns false.</li>
+                <li>Example: <code>true && false</code> returns <code>false</code> because one of the sides is false.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+int x = 5, y = 10;
+if (x > 0 && y > 5) {
+    cout << "Both conditions are true!";
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>|| (Logical OR):</strong>
+            <ul>
+                <li>Means "or" in logic.</li>
+                <li>Returns <code>true</code> if at least one of the conditions is true, and returns <code>false</code> only if all conditions are false.</li>
+                <li>Example: <code>true || false</code> returns <code>true</code> because one side is true.</li>
+            </ul>
+            <div class="example-box"><br>
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+int x = -5, y = 10;
+if (x > 0 || y > 5) {
+    cout << "At least one condition is true!";
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>! (Logical NOT):</strong>
+            <ul>
+                <li>Used to negate a condition. If the condition is true, it returns false, and vice versa.</li>
+                <li>Example: <code>!true</code> returns <code>false</code>.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+bool is_raining = false;
+if (!is_raining) {
+    cout << "It's not raining!";
+}
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>^ (Logical XOR - Exclusive OR):</strong>
+            <ul>
+                <li>Used to perform a comparison where it returns <code>true</code> if one condition is true and the other is false.</li>
+                <li>Returns <code>false</code> if both conditions are true or both are false.</li>
+                <li>Example: <code>true ^ false</code> returns <code>true</code>, but <code>true ^ true</code> returns <code>false</code>.</li>
+            </ul>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+bool a = true, b = false;
+if (a ^ b) {
+    cout << "XOR condition is true!";
+}
+                </pre>
+            </div>
+        </li>
+    </ul>
+
+   
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

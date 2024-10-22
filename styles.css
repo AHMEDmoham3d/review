@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F3F4;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-list a {
+    text-decoration: none !important;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* زر Home */
+.nav-list li:first-child a {
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-list li:first-child a:hover {
+    background-color: #0056b3;
+}
+
+.back-btn {
+    text-decoration: none !important;
+}
+
+/* تنسيق المربعات */
+.box {
+    text-decoration: none;
+    width: calc(50% - 30px); /* أضف تباعدًا بين المربعات */
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s; /* إضافة تأثير الظل */
+    font-size: 20px;
+    color: #007bff;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* تأثير تحريك عند التمرير */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hidden {
+    display: none;
+}
+
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.show-more-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.show-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* تنسيق القائمة المنسدلة */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #007bff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0.2, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styling */
+section {
+    padding: 50px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+    font-size: 28px;
+}
+
+/* Flexbox to align boxes */
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* إضافة تنسيق مخصص للشاشات الصغيرة */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin-bottom: 15px;
+    }
+
+    .nav-list a {
+        font-size: 18px;
+        padding: 10px;
+        background-color: #007bff;
+        border-radius: 5px;
+    }
+}
+
+pre {
+    background-color: #282c34;
+    color: #61dafb;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Syntax highlighting for code */
+code {
+    color: #a80303;
+}
+
+/* Navigation Button */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin-top: auto;
+}

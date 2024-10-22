@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>For Loop Explanation</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>For Loop in C Programming</h2>
+    <p>The <strong>for loop</strong> in C is used to repeat a block of code a certain number of times. It is mainly used when the number of iterations is known beforehand.</p><br>
+    <p><strong>Syntax:</strong></p><br>
+    <pre>
+for (initialization; condition; increment) {
+    // Block of code to execute
+}
+    </pre>
+
+    <h3>Explanation of Parts:</h3><br>
+    <ul>
+        <li><strong>Initialization:</strong> This part initializes the loop counter, usually declared as an integer.</li>
+        <li><strong>Condition:</strong> The condition is evaluated before each iteration. If it's true, the loop continues; if false, it stops.</li>
+        <li><strong>Increment/Decrement:</strong> After each iteration, the loop counter is updated, usually incremented or decremented.</li>
+    </ul>
+
+    <h3>Examples:</h3><br>
+
+    <ul>
+        <li><strong>Example 1: Print Numbers from 1 to 5</strong>
+            <div class="example-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+                </pre>
+                <p><strong>Output:</strong> 1 2 3 4 5</p>
+            </div>
+        </li>
+    
+        <li><strong>Example 2: Sum of Numbers from 1 to 10</strong>
+            <div class="example-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    printf("Sum: %d", sum);
+    return 0;
+}
+                </pre>
+                <p><strong>Output:</strong> Sum: 55</p>
+            </div>
+        </li>
+
+        <li><strong>Example 3: Print Even Numbers between 1 and 10</strong>
+            <div class="example-box">
+                <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for (int i = 2; i <= 10; i += 2) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+                </pre>
+                <p><strong>Output:</strong> 2 4 6 8 10</p>
+            </div>
+        </li>
+    </ul>
+    
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>
