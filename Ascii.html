@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ASCII Table Explanation</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>ASCII Table Explanation</h2>
+    <p>
+        ASCII (American Standard Code for Information Interchange) is a character encoding standard used for representing text in computers. It includes 128 symbols, including English letters, numbers, and special characters. Each symbol is represented by an integer value ranging from 0 to 127.
+    </p>
+    <p>
+        ASCII is widely used in programming and data interchange, providing a standardized way to represent characters, making it easier to handle text in various applications.<br><br><br>
+    </p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/1200px-ASCII-Table-wide.svg.png" 
+    alt="ASCII Table" style="display: block; margin: 0 auto; width: 100%; max-width: 600px;">
+
+
+    <h3>Code Examples in C</h3>
+    
+    <div class="example-box">
+        <strong>1. Printing ASCII Characters:</strong><br><br>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("ASCII characters from 32 to 126:\n");
+    for (int i = 32; i < 127; i++) {
+        printf("ASCII %d: %c\n", i, i);
+    }
+    return 0;
+}
+        </pre>
+        <p><strong>Explanation:</strong> This program prints all printable ASCII characters from 32 to 126 using a <code>for</code> loop.</p>
+    </div>
+
+    <div class="example-box">
+        <strong>2. Converting a Character to its ASCII Value:</strong><br><br>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char character;
+    printf("Enter a character: ");
+    scanf("%c", &character);
+    printf("The ASCII value of '%c' is: %d\n", character, character);
+    return 0;
+}
+        </pre>
+        <p><strong>Explanation:</strong> This program prompts the user to enter a character and prints its ASCII value using <code>%d</code>.</p>
+    </div>
+    
+    <div class="example-box">
+        <strong>3. Using ASCII for Input Validation:</strong><br><br>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char input;
+    printf("Enter a character (A-Z or a-z): ");
+    scanf("%c", &input);
+    
+    // Check if the input character is a letter
+    if ((input >= 65 && input <= 90) || (input >= 97 && input <= 122)) {
+        printf("'%c' is a valid letter.\n", input);
+    } else {
+        printf("'%c' is not a valid letter.\n", input);
+    }
+    return 0;
+}
+        </pre>
+        <p><strong>Explanation:</strong> This program checks if the input character is an uppercase or lowercase letter using ASCII values.</p>
+    </div>
+    
+    <div class="example-box">
+        <strong>4. Finding the ASCII Value of Digits:</strong><br><br>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char digit;
+    printf("Enter a digit (0-9): ");
+    scanf("%c", &digit);
+    
+    if (digit >= '0' && digit <= '9') {
+        printf("The ASCII value of '%c' is: %d\n", digit, digit);
+    } else {
+        printf("'%c' is not a valid digit.\n", digit);
+    }
+    return 0;
+}
+        </pre>
+        <p><strong>Explanation:</strong> This program verifies if the input character is a digit and prints its ASCII value.</p>
+    </div>
+    
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multiple Inheritance in OOP</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Multiple Inheritance in OOP</h2>
+        
+        <p><strong>Multiple Inheritance</strong> is a feature in object-oriented programming (OOP) that allows a class to inherit characteristics and behaviors (attributes and methods) from more than one parent class. This capability can lead to more complex relationships between classes, allowing for greater flexibility and reusability of code.</p>
+        
+        <h3>How Multiple Inheritance Works:</h3>
+        
+        <ul>
+            <li><strong>Inheritance from Multiple Classes:</strong> A derived class can inherit from multiple base classes, gaining access to their attributes and methods.</li>
+            <li><strong>Diamond Problem:</strong> One of the challenges of multiple inheritance is the "diamond problem," where a class inherits from two classes that both inherit from a common ancestor, potentially leading to ambiguity.</li>
+            <li><strong>Accessing Members:</strong> Derived classes can access members from their base classes using scope resolution or through overriding methods.</li>
+        </ul>
+
+        <h4>Importance of Multiple Inheritance:</h4>
+        
+        <ul>
+            <li><strong>Code Reusability:</strong> It allows classes to inherit functionalities from multiple sources, reducing code duplication.</li>
+            <li><strong>Flexibility:</strong> Developers can create more versatile and expressive class hierarchies, adapting to complex requirements.</li>
+            <li><strong>Improved Organization:</strong> Multiple inheritance helps in organizing related functionalities within different classes, promoting better design patterns.</li>
+        </ul>
+
+        <h4>Example Code Demonstrating Multiple Inheritance in C++:</h4>
+
+        <pre>
+// Example 1: Basic Multiple Inheritance
+#include &lt;iostream&gt;
+
+class Printer {
+public:
+    void print() {
+        std::cout &lt;&lt; "Printing from Printer class" &lt;&lt; std::endl;
+    }
+};
+
+class Scanner {
+public:
+    void scan() {
+        std::cout &lt;&lt; "Scanning from Scanner class" &lt;&lt; std::endl;
+    }
+};
+
+class MultiFunctionDevice : public Printer, public Scanner {
+public:
+    void fax() {
+        std::cout &lt;&lt; "Faxing from MultiFunctionDevice class" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    MultiFunctionDevice mfd;
+    mfd.print();
+    mfd.scan();
+    mfd.fax();
+
+    return 0;
+}
+        </pre>
+
+        <pre>
+// Example 2: Multiple Inheritance with Overriding
+#include &lt;iostream&gt;
+
+class Animal {
+public:
+    void eat() {
+        std::cout &lt;&lt; "Animal eats" &lt;&lt; std::endl;
+    }
+};
+
+class Bird {
+public:
+    void fly() {
+        std::cout &lt;&lt; "Bird flies" &lt;&lt; std::endl;
+    }
+};
+
+class Sparrow : public Animal, public Bird {
+public:
+    void sound() {
+        std::cout &lt;&lt; "Sparrow chirps" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Sparrow sparrow;
+    sparrow.eat();
+    sparrow.fly();
+    sparrow.sound();
+
+    return 0;
+}
+        </pre>
+
+        <pre>
+// Example 3: Using Constructors in Multiple Inheritance
+#include &lt;iostream&gt;
+
+class Vehicle {
+public:
+    Vehicle() {
+        std::cout &lt;&lt; "Vehicle constructor" &lt;&lt; std::endl;
+    }
+};
+
+class Engine {
+public:
+    Engine() {
+        std::cout &lt;&lt; "Engine constructor" &lt;&lt; std::endl;
+    }
+};
+
+class Car : public Vehicle, public Engine {
+public:
+    Car() {
+        std::cout &lt;&lt; "Car constructor" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    Car car; // Calls constructors of Vehicle and Engine first
+
+    return 0;
+}
+        </pre>
+
+        <pre>
+// Example 4: Handling the Diamond Problem
+#include &lt;iostream&gt;
+
+class A {
+public:
+    void display() {
+        std::cout &lt;&lt; "Class A" &lt;&lt; std::endl;
+    }
+};
+
+class B : public A {
+public:
+    void display() {
+        std::cout &lt;&lt; "Class B" &lt;&lt; std::endl;
+    }
+};
+
+class C : public A {
+public:
+    void display() {
+        std::cout &lt;&lt; "Class C" &lt;&lt; std::endl;
+    }
+};
+
+class D : public B, public C {
+public:
+    void display() {
+        B::display(); // Resolving ambiguity by specifying class
+        C::display(); // Resolving ambiguity by specifying class
+    }
+};
+
+int main() {
+    D obj;
+    obj.display(); // Calls the display methods from B and C
+
+    return 0;
+}
+        </pre>
+
+        <pre>
+// Example 5: Real-world Example of Multiple Inheritance
+#include &lt;iostream&gt;
+
+class Employee {
+public:
+    void work() {
+        std::cout &lt;&lt; "Employee is working" &lt;&lt; std::endl;
+    }
+};
+
+class Manager {
+public:
+    void manage() {
+        std::cout &lt;&lt; "Manager is managing" &lt;&lt; std::endl;
+    }
+};
+
+class TeamLead : public Employee, public Manager {
+public:
+    void lead() {
+        std::cout &lt;&lt; "Team Lead is leading" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    TeamLead lead;
+    lead.work();
+    lead.manage();
+    lead.lead();
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>In the first example, the <strong>MultiFunctionDevice</strong> class inherits from both the <strong>Printer</strong> and <strong>Scanner</strong> classes, enabling it to use their functionalities.</li>
+            <li>The second example demonstrates a <strong>Sparrow</strong> class that inherits behaviors from both <strong>Animal</strong> and <strong>Bird</strong>, showcasing multiple inheritance.</li>
+            <li>In the third example, the constructors of the <strong>Vehicle</strong> and <strong>Engine</strong> classes are called when creating a <strong>Car</strong> object, demonstrating how constructors work in multiple inheritance.</li>
+            <li>The fourth example illustrates the diamond problem, where the <strong>D</strong> class inherits from both <strong>B</strong> and <strong>C</strong>, both of which inherit from <strong>A</strong>. It resolves ambiguity by specifying which base class's method to call.</li>
+            <li>The fifth example shows a real-world scenario where a <strong>TeamLead</strong> inherits functionalities from both <strong>Employee</strong> and <strong>Manager</strong>, allowing it to combine their behaviors.</li>
+        </ul>
+
+        <h4>Conclusion:</h4>
+        <p>Multiple inheritance is a powerful feature in OOP that enhances flexibility and code reusability. However, it can introduce complexity, especially when dealing with ambiguity or the diamond problem. Properly managing multiple inheritance can lead to more organized and maintainable code structures.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Functions in Programming</h2><br>
+    <ul>
+        <li><strong>What is a Function?<br></strong><br>
+            <p>A function is a block of code that performs a specific task. It can take inputs, called parameters, and can return a value.</p>
+        </li>
+        
+        <li><strong>Importance of Functions:<br></strong><br>
+            <ul>
+                <li>Code Reusability: Functions allow you to reuse code in multiple places without rewriting it.</li>
+                <li>Organization: They help organize code into manageable sections.</li>
+                <li>Maintainability: Functions make it easier to update code.</li>
+            </ul>
+        </li>
+
+        <li><strong>How to Write a Function:<br></strong><br>
+            <p>In C++, a function is defined using the following syntax:</p>
+            <pre>
+return_type function_name(parameters) {
+    // body of the function
+    return value; // if applicable
+}
+            </pre>
+        </li>
+
+        <li><strong>Types of Functions:<br></strong><br>
+            <ul>
+                <li><strong>Void Functions:</strong> Do not return a value.</li>
+                <div class="example-box">
+                    <strong>Example in C++:</strong>
+                    <pre>
+void greet() {
+    cout << "Hello, World!" << endl;
+}
+                    </pre>
+                </div>
+                <li><strong>Value Returning Functions:</strong> Return a value.</li>
+                <div class="example-box">
+                    <strong>Example in C++:</strong>
+                    <pre>
+int add(int a, int b) {
+    return a + b;
+}
+                    </pre>
+                </div>
+                <li><strong>Parameterized Functions:</strong> Take parameters.</li>
+                <div class="example-box">
+                    <strong>Example in C++:</strong>
+                    <pre>
+void printSum(int a, int b) {
+    cout << "Sum: " << a + b << endl;
+}
+                    </pre>
+                </div>
+            </ul>
+        </li>
+
+        <li><strong>How to Call a Function:<br></strong><br>
+            <p>You call a function by using its name followed by parentheses.<br> If it takes parameters, pass the values inside the parentheses.</p>
+            <pre><br>
+greet(); // Calls the greet function
+int result = add(5, 10); // Calls the add function and stores the result
+printSum(3, 4); // Calls the printSum function
+            </pre>
+        </li>
+    </ul>
+</section>
+
+
+<footer>
+    <p>Review &copy; 2024</p></footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sieve of Eratosthenes in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Sieve of Eratosthenes in C++</h2>
+        
+        <p>The <strong>Sieve of Eratosthenes</strong> is one of the most efficient algorithms for finding all prime numbers up to a given limit. This algorithm is named after the ancient Greek mathematician Eratosthenes, and it works by iteratively marking the multiples of prime numbers starting from 2.</p>
+        
+        <h3>How the Sieve of Eratosthenes Works:</h3>
+        
+        <ul>
+            <li><strong>Step 1:</strong> Create a list of consecutive integers from 2 to a given number <em>n</em> (the limit).</li>
+            <li><strong>Step 2:</strong> Start with the first number in the list (2). Mark all its multiples as composite (i.e., not prime).</li>
+            <li><strong>Step 3:</strong> Move to the next number that is not marked and repeat the process of marking its multiples.</li>
+            <li><strong>Step 4:</strong> Continue until all numbers up to the square root of <em>n</em> have been processed.</li>
+            <li><strong>Step 5:</strong> The remaining unmarked numbers are the prime numbers.</li>
+        </ul>
+
+        <h4>Importance of the Sieve of Eratosthenes:</h4>
+        
+        <ul>
+            <li><strong>Efficiency:</strong> It runs in O(n log log n) time, making it much faster than checking each number individually.</li>
+            <li><strong>Simplicity:</strong> It is easy to implement and understand.</li>
+            <li><strong>Memory Usage:</strong> It uses a boolean array to mark composite numbers, making the memory usage reasonable for large limits.</li>
+        </ul>
+
+        <h4>Example Code for the Sieve of Eratosthenes:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+void sieveOfEratosthenes(int n) {
+    std::vector<bool> isPrime(n+1, true);
+    isPrime[0] = isPrime[1] = false;
+
+    for (int i = 2; i * i <= n; i++) {
+        if (isPrime[i]) {
+            for (int j = i * i; j <= n; j += i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Prime numbers up to " &lt;&lt; n &lt;&lt; " are: ";
+    for (int i = 2; i <= n; i++) {
+        if (isPrime[i]) {
+            std::cout &lt;&lt; i &lt;&lt; " ";
+        }
+    }
+    std::cout &lt;&lt; std::endl;
+}
+
+int main() {
+    int limit;
+    std::cout &lt;&lt; "Enter the limit: ";
+    std::cin &gt;&gt; limit;
+
+    sieveOfEratosthenes(limit);
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The function <strong>sieveOfEratosthenes</strong> takes an integer <em>n</em> as input, which represents the limit up to which prime numbers are to be found.</li>
+            <li>A boolean vector <strong>isPrime</strong> is initialized with <em>n+1</em> elements, all set to true. The first two values (0 and 1) are set to false because 0 and 1 are not prime numbers.</li>
+            <li>A loop starts from 2, marking multiples of each prime as false (composite) by setting the corresponding indices in the boolean vector to false.</li>
+            <li>Once all the multiples are marked, the remaining indices that are still true represent prime numbers, which are printed.</li>
+        </ul>
+
+        <h4>Optimized Sieve of Eratosthenes:</h4>
+        <p>The basic version of the sieve can be further optimized by skipping even numbers and starting marking from the square of each prime.</p>
+
+        <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+void optimizedSieve(int n) {
+    std::vector<bool> isPrime(n+1, true);
+    isPrime[0] = isPrime[1] = false;
+
+    for (int i = 2; i * i <= n; i++) {
+        if (isPrime[i]) {
+            for (int j = i * i; j <= n; j += i) {
+                isPrime[j] = false;
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Optimized Prime numbers up to " &lt;&lt; n &lt;&lt; " are: ";
+    for (int i = 2; i <= n; i++) {
+        if (isPrime[i]) {
+            std::cout &lt;&lt; i &lt;&lt; " ";
+        }
+    }
+    std::cout &lt;&lt; std::endl;
+}
+
+int main() {
+    int limit;
+    std::cout &lt;&lt; "Enter the limit: ";
+    std::cin &gt;&gt; limit;
+
+    optimizedSieve(limit);
+
+    return 0;
+}
+        </pre>
+
+    </section>
+
+    <footer>
+        <p>All rights reserved &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

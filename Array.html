@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+<section>
+    <h2>Array in Programming</h2>
+    <ul>
+        <li><strong>What is an Array?</strong>
+            <ul>
+                <li>An array is a data structure used to store multiple values of the same type in a single variable.</li>
+                <li>It allows you to access these values by using an index.</li>
+            </ul>
+        </li>
+    
+        <li><strong>Types of Arrays:</strong>
+            <ul>
+                <li><strong>One-dimensional Array:</strong> A simple list of elements.</li>
+                <li><strong>Two-dimensional Array:</strong> A table or matrix of elements.</li>
+                <li><strong>Multi-dimensional Array:</strong> An array with more than two dimensions (rarely used).</li>
+            </ul>
+        </li>
+    
+        <li><strong>Example of One-dimensional Array:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    int arr[5] = {10, 20, 30, 40, 50};
+    for (int i = 0; i < 5; i++) {
+        cout << "Element at index " << i << " is: " << arr[i] << endl;
+    }
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>Example of Two-dimensional Array:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << "Element at [" << i << "][" << j << "] is: " << matrix[i][j] << endl;
+        }
+    }
+                </pre>
+            </div>
+        </li>
+
+        <li><strong>Example of Multi-dimensional Array:</strong>
+            <div class="example-box">
+                <strong>Example in C++:</strong><br><br>
+                <pre>
+    int array3D[2][3][2] = {
+        {{1, 2}, {3, 4}, {5, 6}},
+        {{7, 8}, {9, 10}, {11, 12}}
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            for (int k = 0; k < 2; k++) {
+                cout << "Element at [" << i << "][" << j << "][" << k << "] is: " << array3D[i][j][k] << endl;
+            }
+        }
+    }
+                </pre>
+            </div>
+        </li>
+    
+        <li><strong>Why use Arrays?</strong>
+            <ul>
+                <li>Arrays allow you to store and manipulate multiple elements easily, providing efficiency in memory usage.</li>
+                <li>They are useful for handling large datasets and for tasks like sorting, searching, and mathematical computations.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    <p>Review &copy; 2024</p>
+</footer>
+
+</body>
+</html>

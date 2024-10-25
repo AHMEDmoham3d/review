@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Importance and Uses of For Loop in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- Other list items here -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Importance and Uses of For Loop in C++</h2>
+        
+        <p>In **C++**, the <code>for</code> loop is a control flow statement used to repeat a block of code a certain number of times. It is especially useful when the number of iterations is known in advance.</p>
+        
+        <h3>Importance of <code>for</code> Loop in C++:</h3>
+        
+        <ul>
+            <li><strong>Efficiency:</strong> The <code>for</code> loop allows repeating tasks without writing the same code multiple times.</li>
+            <li><strong>Easy to Understand:</strong> It is a clear and concise way to loop through arrays, ranges, or sequences of values.</li>
+            <li><strong>Control:</strong> It gives precise control over the number of iterations and how the loop progresses.</li>
+        </ul>
+
+        <h3>How to Write a <code>for</code> Loop:</h3>
+        
+        <p>The <code>for</code> loop has three main parts: initialization, condition, and increment/decrement. It starts by initializing a variable, checks the condition before each iteration, and increments or decrements the variable after each iteration.</p>
+        
+        <h4>Syntax:</h4>
+        
+        <pre>
+for (initialization; condition; increment/decrement) {
+    // loop body
+}
+        </pre>
+
+        <h4>Examples:</h4>
+        
+        <h5>Example 1: Print numbers from 1 to 5</h5>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        std::cout << i << " ";
+    }
+    return 0;
+}
+        </pre>
+        
+        <h5>Example 2: Sum of first 10 numbers</h5>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    int sum = 0;
+    for (int i = 1; i <= 10; i++) {
+        sum += i;
+    }
+    std::cout << "Sum: " << sum << std::endl;
+    return 0;
+}
+        </pre>
+
+        <h5>Example 3: Looping through an array</h5>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    int numbers[] = {10, 20, 30, 40, 50};
+    
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Element at index " << i << ": " << numbers[i] << std::endl;
+    }
+    
+    return 0;
+}
+        </pre>
+
+        <h5>Example 4: Using <code>break</code> in a <code>for</code> loop</h5>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5) {
+            break;
+        }
+        std::cout << i << " ";
+    }
+    return 0;
+}
+        </pre>
+
+        <h5>Example 5: Using <code>continue</code> in a <code>for</code> loop</h5>
+        <pre>
+#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        if (i == 5) {
+            continue;
+        }
+        std::cout << i << " ";
+    }
+    return 0;
+}
+        </pre>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>
+

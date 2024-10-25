@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Selection Sort in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Selection Sort in C++</h2>
+        
+        <p><strong>Selection Sort</strong> is a simple comparison-based sorting algorithm. It divides the input list into two parts: the sorted part at the beginning and the unsorted part at the end. The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion and swaps it with the first unsorted element, effectively growing the sorted portion by one element each time.</p>
+        
+        <h3>How Selection Sort Works:</h3>
+        
+        <ul>
+            <li><strong>Step 1:</strong> Start with the first element of the array and find the smallest element in the unsorted portion of the array.</li>
+            <li><strong>Step 2:</strong> Swap the smallest element with the first unsorted element.</li>
+            <li><strong>Step 3:</strong> Move the boundary between the sorted and unsorted sections one element to the right.</li>
+            <li><strong>Step 4:</strong> Repeat the process until the entire array is sorted.</li>
+        </ul>
+
+        <h4>Importance of Selection Sort:</h4>
+        
+        <ul>
+            <li><strong>Simple to Implement:</strong> It is easy to understand and implement, especially for small arrays.</li>
+            <li><strong>In-Place Sorting:</strong> It does not require additional memory, which makes it memory efficient.</li>
+            <li><strong>Few Swaps:</strong> Unlike other algorithms like Bubble Sort, Selection Sort makes at most <em>n</em> swaps, which is useful when writing to memory is expensive.</li>
+        </ul>
+
+        <h4>Example Code for Selection Sort:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        // Swap the found minimum element with the first element
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    selectionSort(arr, n);
+
+    std::cout &lt;&lt; "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The function <strong>selectionSort</strong> takes an array and its size as input and sorts the array in ascending order using the Selection Sort algorithm.</li>
+            <li>In each iteration of the outer loop, the smallest element in the unsorted portion of the array is found, and a swap is performed to place it at the correct position in the sorted portion.</li>
+            <li>This process continues until the entire array is sorted.</li>
+        </ul>
+
+        <h4>Comparison with Other Sorting Algorithms:</h4>
+        
+        <ul>
+            <li><strong>Selection Sort vs Bubble Sort:</strong> Selection Sort performs fewer swaps than Bubble Sort, making it more efficient in cases where writing to memory is costly. However, both algorithms have a time complexity of O(n²), making them inefficient for large datasets.</li>
+            <li><strong>Selection Sort vs Insertion Sort:</strong> Insertion Sort is generally more efficient for smaller datasets and partially sorted arrays because it has a better average-case time complexity. However, Selection Sort is preferred when minimizing the number of swaps is important.</li>
+        </ul>
+
+        <h4>Optimized Selection Sort:</h4>
+        <p>The basic version of Selection Sort can be further optimized by using a variation where we find both the minimum and maximum elements in each pass, reducing the number of passes needed.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>

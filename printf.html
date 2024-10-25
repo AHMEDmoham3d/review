@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Importance and Uses of C Language</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Importance and Uses of C Language</h2>
+        
+        <p>The C language is considered one of the oldest and most influential programming languages. It was developed in the early 1970s by Dennis Ritchie at Bell Labs, aiming to provide an efficient way to develop systems. C serves as the foundation for many modern programming languages.</p>
+        
+        <h3>Importance of C Language:</h3>
+        
+        <ul>
+            <li><strong>High Performance:</strong> C is known for its high performance and speed, making it ideal for developing applications that require quick responsiveness.</li>
+            <li><strong>Full Memory Control:</strong> C provides precise control over memory management, allowing programmers to optimize application performance.</li>
+            <li><strong>Portability:</strong> C programs can run on multiple operating systems with minimal modifications, facilitating software development across different platforms.</li>
+            <li><strong>Foundation for Learning Other Languages:</strong> C is a basis for many other programming languages, making understanding it essential for programmers.</li>
+            <li><strong>Strong Support Community:</strong> C has a large community of programmers, making it easy to find resources, tutorials, and support.</li>
+        </ul>
+
+        <h3>Uses of C Language:</h3>
+        
+        <ul>
+            <li><strong>Operating System Development:</strong> C is used in developing operating systems like UNIX and Linux.</li>
+            <li><strong>Device Programming:</strong> C is used for programming embedded systems and small devices.</li>
+            <li><strong>Software Development:</strong> C is used to create desktop applications and server applications.</li>
+            <li><strong>Video Games:</strong> C is used in developing many games due to its high performance.</li>
+            <li><strong>Scientific Applications:</strong> C is used in applications that require complex calculations, such as simulations and modeling.</li>
+        </ul>
+
+        <h3>Printing in C Language:</h3>
+        
+        <p>The <code>printf</code> function is used for printing text and values to the console. It belongs to the standard input/output library <code>stdio.h</code>.</p>
+        
+        <h4>Syntax:</h4>
+        
+        <pre>
+printf("format string", variables);
+        </pre>
+
+        <h4>Format Specifiers:</h4>
+        
+        <ul>
+            <li><code>%d</code>: for integers.</li>
+            <li><code>%f</code>: for floating-point numbers.</li>
+            <li><code>%c</code>: for characters.</li>
+            <li><code>%s</code>: for strings.</li>
+            <li><code>%.2f</code>: for floating-point numbers with two decimal places.</li>
+        </ul>
+
+        <h4>Examples:</h4>
+        
+        <h5>Example 1: Printing an Integer</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 25;
+    printf("Your age is: %d\n", age);
+    return 0;
+}
+        </pre>
+        
+        <h5>Example 2: Printing a Float</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    float salary = 5000.75;
+    printf("Your salary is: %.2f\n", salary);
+    return 0;
+}
+        </pre>
+        
+        <h5>Example 3: Printing a Character and String</h5>
+        
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    char initial = 'A';
+    char name[] = "Ali";
+    printf("Initial: %c, Name: %s\n", initial, name);
+    return 0;
+}
+        </pre>
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+        </footer>
+
+</body>
+</html>
