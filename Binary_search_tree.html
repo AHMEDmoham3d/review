@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Binary Search Tree in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Binary Search Tree in C++</h2>
+        
+        <p><strong>Binary Search Tree</strong> (BST) is a binary tree data structure where each node has at most two children, and every node follows a specific ordering property: for each node, all nodes in its left subtree have values less than the node’s value, and all nodes in its right subtree have values greater than the node’s value.</p>
+        
+        <h3>How Binary Search Tree Works:</h3>
+        
+        <ul>
+            <li><strong>Step 1:</strong> Start by comparing the value to be inserted with the root node.</li>
+            <li><strong>Step 2:</strong> If the value is less than the root node, go to the left child; if greater, go to the right child.</li>
+            <li><strong>Step 3:</strong> Repeat this process until finding an empty position in the tree where the new value can be inserted.</li>
+            <li><strong>Step 4:</strong> This property allows efficient searching, insertion, and deletion, with average-case time complexity of O(log n) for balanced trees.</li>
+            <li><strong>Step 5:</strong> Traversing the BST in order yields a sorted list of values.</li>
+        </ul>
+
+        <h4>Importance of Binary Search Tree:</h4>
+        
+        <ul>
+            <li><strong>Efficient Search:</strong> Provides efficient searching, insertion, and deletion compared to a basic binary tree.</li>
+            <li><strong>Data Organization:</strong> Useful for creating sorted data structures and quickly retrieving ordered data.</li>
+            <li><strong>Balanced Trees:</strong> Balanced BSTs like AVL trees or Red-Black trees are often used to optimize performance in practice.</li>
+        </ul>
+
+        <h4>Example Code for Binary Search Tree:</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+    Node(int value) : data(value), left(nullptr), right(nullptr) {}
+};
+
+Node* insert(Node* root, int value) {
+    if (root == nullptr)
+        return new Node(value);
+
+    if (value < root->data)
+        root->left = insert(root->left, value);
+    else if (value > root->data)
+        root->right = insert(root->right, value);
+
+    return root;
+}
+
+void inOrderTraversal(Node* root) {
+    if (root != nullptr) {
+        inOrderTraversal(root->left);
+        std::cout &lt;&lt; root->data &lt;&lt; " ";
+        inOrderTraversal(root->right);
+    }
+}
+
+int main() {
+    Node* root = nullptr;
+    root = insert(root, 50);
+    insert(root, 30);
+    insert(root, 20);
+    insert(root, 40);
+    insert(root, 70);
+    insert(root, 60);
+    insert(root, 80);
+
+    std::cout &lt;&lt; "In-order traversal: ";
+    inOrderTraversal(root);
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of the Code:</h3>
+        
+        <ul>
+            <li>The function <strong>insert</strong> takes the root of the tree and a value, and inserts the value in its correct position according to the BST property.</li>
+            <li><strong>In-order traversal</strong> is used to traverse the tree and print values in a sorted order by recursively visiting the left subtree, then the current node, and finally the right subtree.</li>
+        </ul>
+
+        <h4>Benefits of Optimized Binary Search Trees:</h4>
+        <p>Balanced Binary Search Trees, such as AVL trees or Red-Black trees, improve efficiency by maintaining a balanced structure, ensuring operations occur in O(log n) time complexity. This makes them highly efficient for large datasets where operations on data are frequent.</p>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

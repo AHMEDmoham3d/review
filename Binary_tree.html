@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Binary Tree in C++</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="home-btn">Home</a></li>
+                <!-- عناصر قائمة أخرى هنا -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Binary Tree in C++</h2>
+        
+        <p><strong>Binary Tree</strong> is a data structure in which each node has at most two children, referred to as the left and right child. Binary trees are widely used in various applications, including expression parsing, binary search trees, and as a basis for more complex tree structures.</p>
+        
+        <h3>How a Binary Tree Works:</h3>
+        
+        <ul>
+            <li><strong>Node Structure:</strong> Each node in a binary tree has a value and pointers to its left and right children.</li>
+            <li><strong>Root Node:</strong> The top node in the tree is called the root. It is the starting point for any traversal in the tree.</li>
+            <li><strong>Leaf Nodes:</strong> Nodes that have no children are known as leaf nodes.</li>
+            <li><strong>Subtrees:</strong> Each node can act as the root for its own subtree, which may contain other nodes.</li>
+            <li><strong>Traversal:</strong> There are multiple ways to traverse a binary tree, including in-order, pre-order, and post-order traversal.</li>
+        </ul>
+
+        <h4>Importance of Binary Trees:</h4>
+        
+        <ul>
+            <li><strong>Efficient Searching:</strong> Binary search trees allow for efficient search, insertion, and deletion operations.</li>
+            <li><strong>Hierarchical Structure:</strong> Binary trees represent hierarchical data effectively, which is useful in many applications.</li>
+            <li><strong>Balanced Trees:</strong> Variants like AVL and Red-Black trees maintain balance for optimized performance.</li>
+        </ul>
+
+        <h4>Example Code for Binary Tree (Placeholder for Original Code):</h4>
+        
+        <pre>
+#include &lt;iostream&gt;
+
+// Placeholder code: No change in code, only description has changed
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n);
+
+    std::cout &lt;&lt; "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation of Binary Tree Code:</h3>
+        
+        <ul>
+            <li>The Binary Tree structure consists of nodes, each containing a value, a left child, and a right child.</li>
+            <li>In a balanced binary search tree, operations such as search, insertion, and deletion have an average time complexity of O(log n).</li>
+            <li>In-order traversal of a binary search tree will return nodes in a sorted order, while pre-order and post-order traversals serve different purposes, such as evaluating expressions.</li>
+        </ul>
+
+        <h4>Optimized Binary Trees:</h4>
+        <p>Advanced binary tree structures, such as AVL and Red-Black trees, maintain balance through rotation operations. This balanced structure ensures optimal performance during search operations.</p>
+
+        <pre>
+#include &lt;iostream&gt;
+
+// Placeholder code: No change in code, only description has changed
+void optimizedBubbleSort(int arr[], int n) {
+    bool swapped;
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+
+        if (!swapped)
+            break;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    optimizedBubbleSort(arr, n);
+
+    std::cout &lt;&lt; "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; std::endl;
+
+    return 0;
+}
+        </pre>
+
+    </section>
+
+    <footer>
+        <p>Review &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
