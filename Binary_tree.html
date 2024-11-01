@@ -50,33 +50,67 @@
         <pre>
 #include &lt;iostream&gt;
 
-// Placeholder code: No change in code, only description has changed
-void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+    class TreeNode {
+    public:
+        int value;
+        TreeNode* left;
+        TreeNode* right;
+    
+        TreeNode(int val) : value(val), left(nullptr), right(nullptr) {}
+    };
+    
+    class BinaryTree {
+    public:
+        TreeNode* root;
+    
+        BinaryTree() : root(nullptr) {}
+    
+        void insert(int val) {
+            root = insertRec(root, val);
+        }
+    
+        void inorder() {
+            inorderRec(root);
+            std::cout << std::endl;
+        }
+    
+    private:
+        TreeNode* insertRec(TreeNode* node, int val) {
+            if (node == nullptr) {
+                return new TreeNode(val);
+            }
+            if (val < node->value) {
+                node->left = insertRec(node->left, val);
+            } else {
+                node->right = insertRec(node->right, val);
+            }
+            return node;
+        }
+    
+        void inorderRec(TreeNode* node) {
+            if (node != nullptr) {
+                inorderRec(node->left);
+                std::cout << node->value << " ";
+                inorderRec(node->right);
             }
         }
+    };
+    
+    int main() {
+        BinaryTree tree;
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        int n = sizeof(arr) / sizeof(arr[0]);
+    
+        for (int i = 0; i < n; i++) {
+            tree.insert(arr[i]);
+        }
+    
+        std::cout << "Inorder traversal of the binary tree: ";
+        tree.inorder();
+    
+        return 0;
     }
-}
-
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    bubbleSort(arr, n);
-
-    std::cout &lt;&lt; "Sorted array: ";
-    for (int i = 0; i < n; i++) {
-        std::cout &lt;&lt; arr[i] &lt;&lt; " ";
-    }
-    std::cout &lt;&lt; std::endl;
-
-    return 0;
-}
+    
         </pre>
 
         <h3>Explanation of Binary Tree Code:</h3>
