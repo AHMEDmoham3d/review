@@ -105,27 +105,19 @@ nav {
     display: none;
 }
 
-.show-more-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
 .show-more-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.show-more-btn:hover {
-    background-color: #0056b3;
+.show-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.show-more-btn:active {
+    transform: translateY(2px);
 }
 
 .section-content {
